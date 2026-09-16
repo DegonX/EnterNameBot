@@ -8,6 +8,9 @@ intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
+@bot.event
+async def on_ready():
+    print(f"Ready as {bot.user} | members intent: {bot.intents.members}")
 
 class NameModal(discord.ui.Modal, title="Set your name"):
     name = discord.ui.TextInput(label="Your name", max_length=32)
