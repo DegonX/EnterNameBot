@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-WELCOME_CHANNEL_ID = 1537428191264772185
+WELCOME_CHANNEL_ID = 1537428192057626696
 
 intents = discord.Intents.default()
 intents.members = True
