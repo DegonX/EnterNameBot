@@ -35,7 +35,9 @@ class NameButton(discord.ui.View):
 
 @bot.event
 async def on_member_join(member: discord.Member):
+    print(f"JOIN FIRED for {member} in guild {member.guild.id}")
     channel = member.guild.get_channel(WELCOME_CHANNEL_ID)
+    print(f"Channel lookup: {channel}")
     if channel:
         await channel.send(
             f"Welcome {member.mention}! Click below to set your name.",
